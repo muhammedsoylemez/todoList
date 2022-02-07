@@ -40,12 +40,12 @@ function addTodo(e) {
 
     if (newTodo === "") {
 
-        showAlert("danger", "Lütfen bir todo girin..");
+        showAlert("danger", "Please Enter a todo..");
 
     } else {
         addTodoToUI(newTodo);
         addTodoToStorage(newTodo);
-        showAlert("success", "Başarılı bir şekilde eklendi.");
+        showAlert("success", "Todo successfully added..");
     }
 
 
@@ -114,7 +114,7 @@ function deleteTodo(e) {
     if (e.target.className === "fa fa-remove") {
         e.target.parentElement.parentElement.remove();
         deleteTodoFromStorage(e.target.parentElement.parentElement.textContent);
-        showAlert("success", "Todo başarıyla silindi");
+        showAlert("success", "Todo deleted successfully");
     }
 
 
@@ -158,7 +158,7 @@ function filterTodos(e) {
 // tüm taskları temizleyin fonkisyonu
 
 function clearAllTodos(e) {
-    if (confirm("Tümünü silmek istediğinize emin misiniz ?")) {
+    if (confirm("Are you sure you want to delete them all ?")) {
         // Arayüzden todo'ları temizleme
         // todoList.innerHTML = "" // yavaş yöntem.
 
